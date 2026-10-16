@@ -1,5 +1,5 @@
 import java.util.Random;
-import java.awt.CardLayout;
+import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -47,11 +47,13 @@ public class GuessNumber{
         exit.setBounds(200, 300, 200, 100);
         menuPanel.add(start);
         menuPanel.add(exit);
+        menuPanel.setBackground(Color.LIGHT_GRAY);
         menuPanel.setLayout(null);
 
         start.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
                 layout.show(mainPanel, "game");
+                resetGame();
             }
             
         });
@@ -87,6 +89,7 @@ public class GuessNumber{
         gamePanel.add(result);
         gamePanel.add(back);
         gamePanel.add(retry);
+        gamePanel.setBackground(Color.LIGHT_GRAY);
         gamePanel.setLayout(null);
 
         check.addActionListener(new ActionListener() {
